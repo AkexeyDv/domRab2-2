@@ -32,9 +32,11 @@ public class Gryffindor extends Student {
         System.out.println("Благородство: " + getNobility() + ", честь: " + getHonor() +
                 ", храбрость: " + getBravery());
     }
-    public int sumProperty(){
-        return getNobility()+getHonor()+getBravery();
+
+    public int sumProperty() {
+        return getNobility() + getHonor() + getBravery();
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

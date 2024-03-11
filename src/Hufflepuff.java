@@ -32,8 +32,9 @@ public class Hufflepuff extends Student {
         System.out.println("Трудолюбие: " + getHardWork() + ", верность: " + getLoyal() +
                 ", честность: " + getHonest());
     }
-    public int sumProperty(){
-        return getHardWork()+getLoyal()+getHonest();
+
+    public int sumProperty() {
+        return getHardWork() + getLoyal() + getHonest();
     }
 
     @Override

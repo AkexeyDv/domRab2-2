@@ -40,11 +40,9 @@ public class Ravenclaw extends Student {
                 ", остроумие: " + getWit() + ", творчество: " + getCreativity());
     }
 
-    public int sumProperty(){
-        return getIntelligence()+getWisdom()+getWit()+getCreativity();
+    public int sumProperty() {
+        return getIntelligence() + getWisdom() + getWit() + getCreativity();
     }
-
-
 
 
     @Override

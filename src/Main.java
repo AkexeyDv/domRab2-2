@@ -32,12 +32,11 @@ public class Main {
         students[3].characteristic();
         students[7].characteristic();
         System.out.println(students[1].getClass());
-        Student.comparisonFacultet(students[2],students[1] );
-        Student.comparisonFacultet(students[4],students[5] );
-        Student.comparisonFacultet(students[6],students[8] );
-        Student.comparisonFacultet(students[9],students[10] );
-        Student.comparation(students[0],students[6]);
-
+        Student.comparisonFacultet(students[2], students[1]);
+        Student.comparisonFacultet(students[4], students[5]);
+        Student.comparisonFacultet(students[6], students[8]);
+        Student.comparisonFacultet(students[9], students[10]);
+        Student.comparation(students[0], students[6]);
 
 
         System.out.println();

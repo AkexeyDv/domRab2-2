@@ -45,8 +45,9 @@ public class Slytherin extends Student {
         System.out.println("Хитрость: " + getCunning() + ", решительность: " + getDetermination() +
                 ", амбициозность: " + getAmbition() + ", находчивость: " + getResourcefulness() + ", жажда власти: " + getThirstForPower());
     }
-    public int sumProperty(){
-        return getCunning()+getDetermination()+getAmbition()+getResourcefulness()+getThirstForPower();
+
+    public int sumProperty() {
+        return getCunning() + getDetermination() + getAmbition() + getResourcefulness() + getThirstForPower();
     }
 
     @Override

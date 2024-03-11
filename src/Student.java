@@ -35,10 +35,10 @@ public abstract class Student extends Hogwarts {
 
     public static void comparisonFacultet(Student student1, Student student2) {
         String classFacultet = null;
-        int sumProperty1=0;
-        int sumProperty2=0;
-        sumProperty1=student1.sumProperty();
-        sumProperty2=student2.sumProperty();
+        int sumProperty1 = 0;
+        int sumProperty2 = 0;
+        sumProperty1 = student1.sumProperty();
+        sumProperty2 = student2.sumProperty();
         if (student1.getClass().equals(Ravenclaw.class)) {
             classFacultet = "Коктевранец";
         }
@@ -54,30 +54,45 @@ public abstract class Student extends Hogwarts {
 
         if (student1.getClass() == student2.getClass()) {
             if (sumProperty1 > sumProperty2) {
-                System.out.println(student1.getName() + " лучший " + classFacultet+", чем "+student2.getName());
+                System.out.println(student1.getName() + " лучший " + classFacultet + ", чем " + student2.getName());
 
             } else if (sumProperty1 < sumProperty2) {
-                System.out.println(student2.getName() + " лучший " + classFacultet+", чем "+student1.getName());
+                System.out.println(student2.getName() + " лучший " + classFacultet + ", чем " + student1.getName());
             } else {
                 System.out.println(student1.getName() + " и " + student2.getName() + " одинаковы");
             }
-        }else {System.out.println("Вы сравниваете студентов разных факультетов");}
-
+        } else {
+            System.out.println("Вы сравниваете студентов разных факультетов");
+        }
 
 
     }
-    public static void comparation(Student student1, Student student2){
-        int sumProperty1=0;
-        int sumProperty2=0;
-        sumProperty1=student1.getMagic()+student1.getTrasgessionOfDistance();
-        sumProperty2=student2.getMagic()+student2.getTrasgessionOfDistance();
-        if(sumProperty1>sumProperty2){
-            System.out.println(student1.getName() + " лучше, чем "+student2.getName());
-        } else if (sumProperty2>sumProperty1) {
-            System.out.println(student2.getName() + " лучше, чем "+student1.getName());
-        }else {
-            System.out.println(student2.getName() + " и "+student1.getName()+" одинаковы");
+
+    public static void comparation(Student student1, Student student2) {
+        int sumProperty1 = 0;
+        int sumProperty2 = 0;
+        sumProperty1 = student1.getMagic() + student1.getTrasgessionOfDistance();
+        sumProperty2 = student2.getMagic() + student2.getTrasgessionOfDistance();
+        if (sumProperty1 > sumProperty2) {
+            System.out.println(student1.getName() + " лучше, чем " + student2.getName());
+        } else if (sumProperty2 > sumProperty1) {
+            System.out.println(student2.getName() + " лучше, чем " + student1.getName());
+        } else {
+            System.out.println(student2.getName() + " и " + student1.getName() + " одинаковы");
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return Objects.equals(name, student.name) && Objects.equals(surname, student.surname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname);
     }
 }
 
