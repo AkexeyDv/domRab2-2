@@ -36,8 +36,8 @@ public class Main {
         Student.comparisonFacultet(students[4],students[5] );
         Student.comparisonFacultet(students[6],students[8] );
         Student.comparisonFacultet(students[9],students[10] );
+        Student.comparation(students[0],students[6]);
 
-        //
 
 
         System.out.println();

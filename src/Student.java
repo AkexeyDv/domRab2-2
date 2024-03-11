@@ -64,6 +64,20 @@ public abstract class Student extends Hogwarts {
         }else {System.out.println("Вы сравниваете студентов разных факультетов");}
 
 
+
+    }
+    public static void comparation(Student student1, Student student2){
+        int sumProperty1=0;
+        int sumProperty2=0;
+        sumProperty1=student1.getMagic()+student1.getTrasgessionOfDistance();
+        sumProperty2=student2.getMagic()+student2.getTrasgessionOfDistance();
+        if(sumProperty1>sumProperty2){
+            System.out.println(student1.getName() + " лучше, чем "+student2.getName());
+        } else if (sumProperty2>sumProperty1) {
+            System.out.println(student2.getName() + " лучше, чем "+student1.getName());
+        }else {
+            System.out.println(student2.getName() + " и "+student1.getName()+" одинаковы");
+        }
     }
 }
 
