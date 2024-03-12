@@ -43,18 +43,4 @@ public class Ravenclaw extends Student {
     public int sumProperty() {
         return getIntelligence() + getWisdom() + getWit() + getCreativity();
     }
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Ravenclaw ravenclaw = (Ravenclaw) o;
-        return Intelligence == ravenclaw.Intelligence && wisdom == ravenclaw.wisdom && wit == ravenclaw.wit && creativity == ravenclaw.creativity;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(Intelligence, wisdom, wit, creativity);
-    }
 }

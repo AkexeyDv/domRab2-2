@@ -49,17 +49,4 @@ public class Slytherin extends Student {
     public int sumProperty() {
         return getCunning() + getDetermination() + getAmbition() + getResourcefulness() + getThirstForPower();
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Slytherin slytherin = (Slytherin) o;
-        return cunning == slytherin.cunning && determination == slytherin.determination && ambition == slytherin.ambition && resourcefulness == slytherin.resourcefulness && thirstForPower == slytherin.thirstForPower;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(cunning, determination, ambition, resourcefulness, thirstForPower);
-    }
 }

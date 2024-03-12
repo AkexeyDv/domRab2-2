@@ -37,17 +37,4 @@ public class Hufflepuff extends Student {
         return getHardWork() + getLoyal() + getHonest();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Hufflepuff that = (Hufflepuff) o;
-        return hardWork == that.hardWork && loyal == that.loyal && honest == that.honest;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), hardWork, loyal, honest);
-    }
 }
